@@ -1,0 +1,20 @@
+{
+  "name": "intro_angular_challenges",
+  "homepage": "https://github.com/CamB17/intro_angular_challenges",
+  "authors": [
+    "CamB17"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4"
+  }
+}
