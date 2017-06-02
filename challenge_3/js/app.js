@@ -12,17 +12,15 @@ function infoController(){
 };
 
 function loanController(){
-  this.amount = 1000;
-  this.apr = 3;
-
-  this.month = function(n){
-    var yearly_interest = (this.amount *(this.apr / 100) );
-    var monthly_interest = (yearly_interest / 12 );
-    var accrued_interest = (n * monthly_interest || 0);
-
+  this.amount = 500;
+  this.apr = 2.2;
+  this.month = (n) => {
+    var yearly_interest = (this.amount * (this.apr / 100) );
+    var monthly_interst = ( yearly_interest / 12 );
+    var accrued_interest = n * monthly_interst || 0;
     return {
-      accrued_interest,
-    total_balance: this.amount + accrued_interest
-    }  
+      accrued_interest: accrued_interest,
+      total_balance: this.amount + accrued_interest
+    }
   }
 }

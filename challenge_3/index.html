@@ -69,8 +69,8 @@
            (Make sure to also uncomment infoController in js/app.js!)
       </li>
       <li>
-        Before: What were <code>name</code> and <code>height</code> being attached ("bound") to?<br>
-        After: What are <code>name</code> and <code>height</code> bound to now?
+        Before: What were <code>name</code> and <code>height</code> being attached ("bound") to? ng-model <br>
+        After: What are <code>name</code> and <code>height</code> bound to now? the controller
       </li>
     </ol>
   </section>
@@ -79,12 +79,12 @@
     <h4>Exercise #2:</h4>
     <p>Instant Math!</p>
     <p>Can you get these simple calculators to work using only a view model (ng-model)?</p>
-    <div ng-model="calc">
-      <input type="number" ng-model="calc.one"> + <input type="number" ng-model="calc.two"> = {{ calc.one * calc.two || 0 }}
+    <div>
+      <input ng-model="xOne" type="number"> + <input ng-model="yOne" type="number"> = {{ xOne + yOne }}
     </div>
 
-    <div ng-model="calc">
-      <input type="number" ng-model="calc.left"> * <input type="number" ng-model="calc.right"> = {{ calc.left * calc.right || 0}}
+    <div>
+      <input ng-model="xTwo" type="number"> * <input ng-model="yTwo" type="number"> = {{ xTwo * yTwo }}
     </div>
   </section>
 
@@ -99,7 +99,7 @@
       n months.
     </p>
 
-    <div data-ng-controller="loanController as loan"> <!-- HINT: add "loanController as loan" here -->
+    <div ng-controller="loanController as loan"> <!-- HINT: add "loanController as loan" here -->
           <!-- DON'T MODIFY ANYTHING ELSE -->
       <div class="form-group">
         <label>Loan Amount:</label>
@@ -123,18 +123,18 @@
         <tbody>
           <tr>
             <th>Month 1</th>
-            <td>${{loan.month(1).accrued_interest}}</td>
-            <td>${{loan.month(1).total_balance}}</td>
+            <td>${{loan.month(1).accrued_interest | currency}}</td>
+            <td>${{loan.month(1).total_balance | currency}}</td>
           </tr>
           <tr>
             <th>Month 2</th>
-            <td>${{loan.month(2).accrued_interest}}</td>
-            <td>${{loan.month(2).total_balance}}</td>
+            <td>${{loan.month(2).accrued_interest | currency}}</td>
+            <td>${{loan.month(2).total_balance | currency}}</td>
           </tr>
           <tr>
             <th>Month 12</th>
-            <td>${{loan.month(12).accrued_interest}}</td>
-            <td>${{loan.month(12).total_balance}}</td>
+            <td>${{loan.month(12).accrued_interest | currency}}</td>
+            <td>${{loan.month(12).total_balance | currency}}</td>
           </tr>
         </tbody>
       </table>

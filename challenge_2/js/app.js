@@ -15,7 +15,8 @@ app.controller("WelcomeController", WelcomeController);
     return out;
   }
 };
-
+  
+app.controller("WDIController", WDIController);
  function WdiController(){
  	this.class_name = "DenverWdi";
  	this.enrolled_students = ["Jess", "Alex", "Tyler", "Troy", "Jacy", "Bob", "Tyler", "Cole", "Bill", "Alexi", "Cam", "Nate"],
