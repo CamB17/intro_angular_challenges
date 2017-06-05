@@ -99,22 +99,22 @@ function WelcomeController(){
       </ol>
     </section>
   </div>
-<div data-ng-controller="WDIController as wdiCont">
-  <div id="add-your-controller"> <!-- HINT: Wrap this exercise in a new controller -->
+
+  <div data-ng-controller= "WdiController as wdi"> <!-- HINT: Wrap this exercise in a new controller -->
     <section class="exercises">
       <h4>Exercise #2:</h4>
       <p>Can you create a second controller for this exercise and then dynamically fill in the blanks?</p>
       <p>Describe your WDI class:</p>
       <ol>
-        <li>Class Name: {{ wdiCont.class_name }}</li>
-        <li>Students: {{ wdiCont.enrolled_students }}</li>
-        <li>Start: {{ wdiCont.start_date }}</li>
-        <li>End: {{ wdiCont.end_date }}</li>
+        <li>Class Name: {{ wdi.class_name }}</li>
+        <li>Students: {{ wdi.enrolled_students }}</li>
+        <li>Start: {{ wdi.start_date }}</li>
+        <li>End: {{ wdi.end_date }}</li>
         <!-- HINT: Create a daysRemaining() function in your controller that calculate this -->
-        <li>Days Left: {{ wdiCont.daysRemaining() }}</li>
+        <li>Days Left: {{ wdi.daysRemaining() }}</li>
       </ol>
     </section>
   </div>
-</div>
+
 </body>
 </html>

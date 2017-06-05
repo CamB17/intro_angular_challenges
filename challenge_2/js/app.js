@@ -16,7 +16,7 @@ app.controller("WdiController", WdiController);
   
 function WdiController() {
   this.class_name = "WDI3";
-  this.enrolled_students = 12;
+  this.enrolled_students =["Jess", "Alex", "Tyler", "Troy", "Jacy", "Bob", "Tyler", "Cole", "Bill", "Alexi", "Cam", "Nate"];
   this.start_date = "3/13/2017";
   this.end_date = "6/02/2017";
   this.daysRemaining = () => {
